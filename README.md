@@ -1,4 +1,4 @@
-# we-2021-vue-demo
+# Vue2 wangEditor demo
 
 ## Project setup
 ```

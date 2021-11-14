@@ -1,28 +1,52 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <!-- <button @click="dialogVisible = !dialogVisible">show/hide</button>
+    <hr> -->
+
+    <!-- <el-button type="text" @click="dialogVisible = true">点击打开 Dialog</el-button>
+    <el-dialog
+      title="editor"
+      :visible.sync="dialogVisible"
+      width="80%"
+    >
+      <my-editor></my-editor>
+
+      <span slot="footer" class="dialog-footer">
+        <el-button @click="dialogVisible = false">取 消</el-button>
+        <el-button type="primary" @click="dialogVisible = false">确 定</el-button>
+      </span>
+    </el-dialog> -->
+
+    <!-- <el-card class="box-card">
+      <div slot="header" class="clearfix">
+        <span>卡片名称</span>
+        <el-button style="float: right; padding: 3px 0" type="text">操作按钮</el-button>
+      </div>
+      <my-editor></my-editor>
+    </el-card> -->
+
+    <my-editor></my-editor>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import MyEditor from './components/MyEditor.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
-  }
+    MyEditor
+  },
+  // data() {
+  //     return {
+  //       dialogVisible: false
+  //     }
+  // },
 }
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+.box-card {
+  width: 800px;
 }
 </style>
