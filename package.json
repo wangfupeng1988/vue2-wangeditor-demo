@@ -9,8 +9,8 @@
     "test": "cross-env NODE_OPTIONS=--unhandled-rejections=warn jest --unhandled-rejections=warn"
   },
   "dependencies": {
-    "@wangeditor/editor": "^0.12.8",
-    "@wangeditor/editor-for-vue": "^0.6.12-2",
+    "@wangeditor/editor": "^0.13.1",
+    "@wangeditor/editor-for-vue": "^0.6.12-3",
     "core-js": "^3.6.5",
     "element-ui": "^2.15.5",
     "lodash.clonedeep": "^4.5.0",
