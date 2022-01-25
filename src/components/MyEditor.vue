@@ -11,7 +11,7 @@
             style="height: 500px"
             :editorId="editorId"
             :defaultConfig="editorConfig"
-            :defaultContent="defaultContent"
+            :defaultContent="getDefaultContent"
             @onChange="onChange"
         />
         <!-- 初始化内容， defaultHtml 和 defaultContent ，二选一 -->
