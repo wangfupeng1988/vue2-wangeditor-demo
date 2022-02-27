@@ -25,20 +25,20 @@
       <my-editor></my-editor>
     </el-card> -->
 
-    <!-- <my-editor></my-editor> -->
-    <my-editor-with-mention></my-editor-with-mention>
+    <my-editor></my-editor>
+    <!-- <my-editor-with-mention></my-editor-with-mention> -->
   </div>
 </template>
 
 <script>
-// import MyEditor from './components/MyEditor.vue'
-import MyEditorWithMention from './components/MyEditorWithMention'
+import MyEditor from './components/MyEditor.vue'
+// import MyEditorWithMention from './components/MyEditorWithMention'
 
 export default {
   name: 'App',
   components: {
-    // MyEditor,
-    MyEditorWithMention
+    MyEditor,
+    // MyEditorWithMention
   },
   // data() {
   //     return {
