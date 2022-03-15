@@ -21,7 +21,7 @@
                 :editorId="editorId"
 
                 :defaultConfig="editorConfig"
-                :defaultContent="getDefaultContent"
+                :defaultContent="defaultContent"
                 :mode="mode"
 
                 @onCreated="onCreated"
@@ -39,7 +39,6 @@
 <script>
 import { SlateTransforms, SlateEditor } from '@wangeditor/editor'
 import { Editor, Toolbar, getEditor, removeEditor } from '@wangeditor/editor-for-vue'
-import cloneDeep from 'lodash.clonedeep'
 
 // i18nChangeLanguage('en')
 
@@ -93,11 +92,6 @@ export default {
             },
             mode: 'default', // or 'simple'
             latestContent: []
-        }
-    },
-    computed: {
-        getDefaultContent() {
-            return cloneDeep(this.defaultContent)
         }
     },
     methods: {

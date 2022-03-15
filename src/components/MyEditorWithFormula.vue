@@ -13,7 +13,7 @@
                 style="height: 500px"
                 :editorId="editorId"
                 :defaultConfig="editorConfig"
-                :defaultContent="getDefaultContent"
+                :defaultContent="defaultContent"
                 @onChange="onChange"
             />
             <!-- 初始化内容， defaultHtml 和 defaultContent ，二选一 -->
@@ -25,7 +25,6 @@
 <script>
 import { Boot } from '@wangeditor/editor'
 import { Editor, Toolbar, getEditor, removeEditor } from '@wangeditor/editor-for-vue'
-import cloneDeep from 'lodash.clonedeep'
 import formulaModule from '@wangeditor/plugin-formula'
 // console.log('formulaModule', formulaModule)
 Boot.registerModule(formulaModule)
@@ -65,11 +64,6 @@ export default {
             },
 
             isAjaxDone: false
-        }
-    },
-    computed: {
-        getDefaultContent() {
-            return cloneDeep(this.defaultContent) // 深拷贝，重要！！！
         }
     },
     methods: {
