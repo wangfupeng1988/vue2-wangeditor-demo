@@ -26,18 +26,21 @@
     </el-card> -->
 
     <my-editor></my-editor>
+    <!-- <MyEditorWithFormula></MyEditorWithFormula> -->
     <!-- <my-editor-with-mention></my-editor-with-mention> -->
   </div>
 </template>
 
 <script>
 import MyEditor from './components/MyEditor.vue'
+// import MyEditorWithFormula from './components/MyEditorWithFormula'
 // import MyEditorWithMention from './components/MyEditorWithMention'
 
 export default {
   name: 'App',
   components: {
     MyEditor,
+    // MyEditorWithFormula,
     // MyEditorWithMention
   },
   // data() {

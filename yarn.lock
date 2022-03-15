@@ -1831,6 +1831,18 @@
     scroll-into-view-if-needed "^2.2.28"
     slate-history "^0.66.0"
 
+"@wangeditor/core@^0.14.14":
+  version "0.14.14"
+  resolved "https://registry.yarnpkg.com/@wangeditor/core/-/core-0.14.14.tgz#5c83274e796ebe5bcc69e289d2e9fa9ac8bad9b6"
+  integrity sha512-NWDr1gQGE7Zroma2CYYueTU6xrYqnuVzp6kJPMFv+Oc7tSSczj9kGIBFWE1dJcKTCBPdSxm8LrgAoWgDgGqcYw==
+  dependencies:
+    "@types/event-emitter" "^0.3.3"
+    event-emitter "^0.3.5"
+    html-void-elements "^2.0.0"
+    i18next "^20.4.0"
+    scroll-into-view-if-needed "^2.2.28"
+    slate-history "^0.66.0"
+
 "@wangeditor/editor-for-vue@^0.6.14-1":
   version "0.6.14-1"
   resolved "https://registry.yarnpkg.com/@wangeditor/editor-for-vue/-/editor-for-vue-0.6.14-1.tgz#5f5156db3e1033ed8dddee5eaef73845c4e28110"
@@ -1870,10 +1882,18 @@
   resolved "https://registry.yarnpkg.com/@wangeditor/list-module/-/list-module-0.9.3.tgz#b38bd0ede85dc1eb2d8d7fdb6f740d12a72999b3"
   integrity sha512-bj4PpFVqk63gA8QLdwESfZGUT/VSuFqv/JVYURqporlkiq3s+kalJwcl5Gu4ZViS21Ibaw3m8jHQjJMJW8nfRA==
 
-"@wangeditor/plugin-mention@^0.0.3":
-  version "0.0.3"
-  resolved "https://registry.yarnpkg.com/@wangeditor/plugin-mention/-/plugin-mention-0.0.3.tgz#28f4a501e8acdfac3903ad7d6b6b5bc20b16efeb"
-  integrity sha512-0ef84KGfly/M9Y7PkSpwvebrJcc6wecxhAul6OA9Vs5nwLTyUGtyRb+bP7S6nUqFS4aDQjgkrRZNBZApNmRWjA==
+"@wangeditor/plugin-formula@^1.0.7":
+  version "1.0.7"
+  resolved "https://registry.yarnpkg.com/@wangeditor/plugin-formula/-/plugin-formula-1.0.7.tgz#49ad3dbcda8560665737cf17f67da9024fc1e9eb"
+  integrity sha512-og1LWKPtPOAmepLZo+pVUSSaU3G0rheX49yvLglN7Az4JSTIPC1h8utaG9SCLeKbeukiPajkZz3W60rkY9+RxA==
+  dependencies:
+    dom7 "^4.0.4"
+    nanoid "^3.2.0"
+
+"@wangeditor/plugin-mention@^0.0.5":
+  version "0.0.5"
+  resolved "https://registry.yarnpkg.com/@wangeditor/plugin-mention/-/plugin-mention-0.0.5.tgz#5d89e49629cb96465bed0b14d0a8413303511ee8"
+  integrity sha512-Q7vby5n468MTFnuM2JET+f76iDHIdwZvdmz0MrbihyOWBQYaZRLaVy5cBQ656/mthqULinaBsiKF4jNB2sv8Zw==
 
 "@wangeditor/table-module@^0.10.7":
   version "0.10.7"
@@ -3286,6 +3306,11 @@ commander@^2.18.0, commander@^2.19.0, commander@^2.20.0:
   resolved "https://registry.yarnpkg.com/commander/-/commander-2.20.3.tgz#fd485e84c03eb4881c20722ba48035e8531aeb33"
   integrity sha512-GpVkmM8vF2vQUkj2LvZmD35JxeJOLCwJ9cUkugyk2nuhbv3+mJvpLYYt+0+USMxE+oj+ey/lJEnhZw75x/OMcQ==
 
+commander@^8.0.0:
+  version "8.3.0"
+  resolved "https://registry.yarnpkg.com/commander/-/commander-8.3.0.tgz#4837ea1b2da67b9c616a67afbb0fafee567bca66"
+  integrity sha512-OkTL9umf+He2DZkUq8f8J9of7yL6RJKI24dVITBmNfZBmri9zYZQrKkuXiKhyfPSu8tUhnVBB1iKXevvnlR4Ww==
+
 commander@~2.19.0:
   version "2.19.0"
   resolved "https://registry.yarnpkg.com/commander/-/commander-2.19.0.tgz#f6198aa84e5b83c46054b94ddedbfed5ee9ff12a"
@@ -4047,6 +4072,13 @@ dom7@^3.0.0:
   integrity sha512-oNlcUdHsC4zb7Msx7JN3K0Nro1dzJ48knvBOnDPKJ2GV9wl1i5vydJZUSyOfrkKFDZEud/jBsTk92S/VGSAe/g==
   dependencies:
     ssr-window "^3.0.0-alpha.1"
+
+dom7@^4.0.4:
+  version "4.0.4"
+  resolved "https://registry.yarnpkg.com/dom7/-/dom7-4.0.4.tgz#8b68c5d8e5e2ed0fddb1cb93e433bc9060c8f3fb"
+  integrity sha512-DSSgBzQ4rJWQp1u6o+3FVwMNnT5bzQbMb+o31TjYYeRi05uAcpF8koxdfzeoe5ElzPmua7W7N28YJhF7iEKqIw==
+  dependencies:
+    ssr-window "^4.0.0"
 
 domain-browser@^1.1.1:
   version "1.2.0"
@@ -6713,6 +6745,13 @@ jsprim@^1.2.2:
     json-schema "0.4.0"
     verror "1.10.0"
 
+katex@^0.15.3:
+  version "0.15.3"
+  resolved "https://registry.yarnpkg.com/katex/-/katex-0.15.3.tgz#08781a7ed26800b20380d959d1ffcd62bca0ec14"
+  integrity sha512-Al6V7RJsmjklT9QItyHWGaQCt+NYTle1bZwB1e9MR/tLoIT1MXaHy9UpfGSB7eaqDgjjqqRxQOaQGrALCrEyBQ==
+  dependencies:
+    commander "^8.0.0"
+
 killable@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/killable/-/killable-1.0.1.tgz#4c8ce441187a061c7474fb87ca08e2a638194892"
@@ -9328,6 +9367,11 @@ ssr-window@^3.0.0-alpha.1:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/ssr-window/-/ssr-window-3.0.0.tgz#fd5b82801638943e0cc704c4691801435af7ac37"
   integrity sha512-q+8UfWDg9Itrg0yWK7oe5p/XRCJpJF9OBtXfOPgSJl+u3Xd5KI328RUEvUqSMVM9CiQUEf1QdBzJMkYGErj9QA==
+
+ssr-window@^4.0.0:
+  version "4.0.2"
+  resolved "https://registry.yarnpkg.com/ssr-window/-/ssr-window-4.0.2.tgz#dc6b3ee37be86ac0e3ddc60030f7b3bc9b8553be"
+  integrity sha512-ISv/Ch+ig7SOtw7G2+qkwfVASzazUnvlDTwypdLoPoySv+6MqlOV10VwPSE6EWkGjhW50lUmghPmpYZXMu/+AQ==
 
 ssri@^6.0.1:
   version "6.0.2"
