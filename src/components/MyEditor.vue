@@ -13,7 +13,7 @@
             />
             <!-- 编辑器 -->
             <Editor
-                style="height: 400px"
+                style="height: 400px; overflow-y: hidden;"
                 :defaultConfig="editorConfig"
                 v-model="html"
                 @onChange="onChange"
