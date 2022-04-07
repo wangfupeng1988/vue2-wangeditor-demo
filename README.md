@@ -1,24 +1,14 @@
 # Vue2 wangEditor demo
 
-## Project setup
-```
-yarn install
-```
+本项目通过 [Vue-cli](https://cli.vuejs.org/zh/) 创建。
 
-### Compiles and hot-reloads for development
-```
+## 本地运行
+
+```sh
+yarn install
 yarn serve
 ```
 
-### Compiles and minifies for production
-```
-yarn build
-```
+## 参考
 
-### Lints and fixes files
-```
-yarn lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+- [文档](https://www.wangeditor.com/v5/guide/for-frame.html#vue2)
