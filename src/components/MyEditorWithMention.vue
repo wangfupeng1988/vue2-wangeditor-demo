@@ -4,15 +4,15 @@
         <div style="border: 1px solid #ccc;">
             <Toolbar
                 style="border-bottom: 1px solid #ccc"
-                :editorId="editorId"
+                :editor="editor"
                 :defaultConfig="toolbarConfig"
             />
             <Editor
                 style="height: 400px"
-                :editorId="editorId"
+                v-model="html"
                 :defaultConfig="editorConfig"
-                :defaultHtml="defaultHtml"
                 @onChange="onChange"
+                @onCreated="onCreated"
             />
             <mention-modal
                 v-if="isShowModal"
@@ -20,16 +20,15 @@
                 @insertMention="insertMention"
             ></mention-modal>
         </div>
-        <div style="display: flex; margin-top: 10px;">
-            <div style="flex: 1; margin-right: 5px;"><textarea v-model="curHtml" style="width: 100%; height: 500px;"></textarea></div>
-            <div style="flex: 1; margin-left: 5px;"><textarea v-model="curContent" style="width: 100%; height: 500px;"></textarea></div>
+        <div style="margin-top: 10px;">
+            <textarea v-model="html" style="width: 100%; height: 500px;"></textarea>
         </div>
     </div>
 </template>
 
 <script>
 import { Boot } from '@wangeditor/editor'
-import { Editor, Toolbar, getEditor, removeEditor } from '@wangeditor/editor-for-vue'
+import { Editor, Toolbar } from '@wangeditor/editor-for-vue'
 import mentionModule from '@wangeditor/plugin-mention'
 import MentionModal from './MentionModal'
 
@@ -41,8 +40,8 @@ export default {
     components: { Editor, Toolbar, MentionModal },
     data() {
         return {
-            editorId: 'wangEditor-1', // 定义一个编辑器 id ，要求：全局唯一且不变！！！
-            defaultHtml: '<p>你好<span data-w-e-type="mention" data-w-e-is-void data-w-e-is-inline data-value="A张三" data-info="%7B%22id%22%3A%22a%22%7D">@A张三</span></p>',
+            editor: null,
+            html: '<p>你好<span data-w-e-type="mention" data-w-e-is-void data-w-e-is-inline data-value="A张三" data-info="%7B%22id%22%3A%22a%22%7D">@A张三</span></p>',
             toolbarConfig: {},
             editorConfig: {
                 placeholder: '请输入内容...',
@@ -54,14 +53,14 @@ export default {
                     },
                 },
             },
-            curHtml: '',
-            curContent: '',
             isShowModal: false
         }
     },
     methods: {
+        onCreated(editor) {
+            this.editor = Object.seal(editor) // 【注意】一定要用 Object.seal() 否则会报错
+        },
         onChange(editor) {
-            this.curContent = JSON.stringify(editor.children, null, 2)
             this.curHtml = editor.getHtml()
         },
         showMentionModal() {
@@ -77,7 +76,7 @@ export default {
                 info: { id },
                 children: [{ text: '' }], // 必须有一个空 text 作为 children
             }
-            const editor = getEditor(this.editorId)
+            const editor = this.editor
             if (editor) {
                 editor.restoreSelection() // 恢复选区
                 editor.deleteBackward('character') // 删除 '@'
@@ -87,10 +86,9 @@ export default {
         }
     },
     beforeDestroy() {
-        const editor = getEditor(this.editorId)
+        const editor = this.editor
         if (editor == null) return
         editor.destroy() // 组件销毁时，及时销毁 editor ，重要！！！
-        removeEditor(this.editorId)
     },
 }
 </script>
