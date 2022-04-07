@@ -19,7 +19,6 @@
                 @onChange="onChange"
                 @onCreated="onCreated"
             />
-            <!-- 初始化内容， defaultHtml 和 defaultContent ，二选一 -->
         </div>
         <div style="margin-top: 10px;">
             <textarea
