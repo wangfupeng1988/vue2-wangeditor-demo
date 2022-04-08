@@ -2,7 +2,8 @@
     <div>
         <div>
             <button @click="printEditorHtml">print html</button>
-            <button @click="getEditorText">print text</button>
+            <button @click="insertTextHandler">insert text</button>
+            <button @click="disableHandler">disable</button>
         </div>
         <div style="border: 1px solid #ccc; margin-top: 10px;">
             <!-- 工具栏 -->
@@ -60,17 +61,20 @@ export default {
         onChange(editor) {
             console.log('onChange', editor.getHtml()) // onChange 时获取编辑器最新内容
         },
-        getEditorText() {
+        insertTextHandler() {
             const editor = this.editor
             if (editor == null) return
-
-            console.log(editor.getText()) // 执行 editor API
+            editor.insertText(' hello ')
         },
         printEditorHtml() {
             const editor = this.editor
             if (editor == null) return
-
-            console.log(editor.getHtml()) // 执行 editor API
+            console.log(editor.getHtml())
+        },
+        disableHandler() {
+            const editor = this.editor
+            if (editor == null) return
+            editor.disable()
         }
     },
     mounted() {
