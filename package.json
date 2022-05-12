@@ -10,8 +10,8 @@
   },
   "dependencies": {
     "@wangeditor/core": "^1.0.0",
-    "@wangeditor/editor": "^5.0.0",
-    "@wangeditor/editor-for-vue": "^1.0.0",
+    "@wangeditor/editor": "^5.0.1",
+    "@wangeditor/editor-for-vue": "^1.0.1",
     "@wangeditor/plugin-formula": "^1.0.8",
     "@wangeditor/plugin-mention": "^0.0.5",
     "core-js": "^3.6.5",
